@@ -1,0 +1,18 @@
+n1 = 0
+n2 = 1
+
+term = int(input("Enter the number of terms :"))
+
+if term <=0:
+    print("Please enter positive number only")
+
+else:
+    if term ==1:
+        print(n1,end=" ")
+    else:
+        print(n1,n2,end=" ")
+        for i in range(2,term):
+            n3=n1+n2
+            print(n3,end=" ")
+            n1 = n2
+            n2 = n3
