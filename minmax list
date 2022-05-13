@@ -1,0 +1,18 @@
+# creating empty list
+
+listn = []
+
+# Input number of elements to put in list
+
+num = int(input("Enter number of elements in list: "))
+
+# iterating till num to append elements in list
+
+for i in range(1, num + 1):
+    element= int(input("Enter elements: "))
+    listn.append(element)
+
+    # print Smallest element
+    
+print("Smallest element in List is:", min(listn))
+print("Largest element in List is:", max(listn))
