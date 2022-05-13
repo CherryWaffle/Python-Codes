@@ -1,0 +1,18 @@
+numlist = []
+
+listTot = int(input("Total list items to enter = "))
+for i in range(1, listTot+1):
+    value = input("Enter the %d List Item = " %i)
+    numlist.append(value)
+
+print("Original list :",numlist)
+s=len(numlist)
+if s%2!=0:
+    s=s-1
+
+print("Elements at odd location :",numlist[::2])
+print("Eelments at even location :",numlist[1::2])
+
+for i in range(0,s,2):
+    numlist[i],numlist[i+1] = numlist[i+1],numlist[i]
+print("List after swapping :",numlist)
