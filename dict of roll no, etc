@@ -1,0 +1,24 @@
+n = int(input("Enter number of students :"))
+result = {}
+for i in range(n):
+    print("Enter details of students :",i+1)
+    rno = int(input("Enter roll number :"))
+    name = input("Name :")
+
+    english = float(input("Enter English Marks: "))
+    math = float(input("Enter Math score: "))
+    computers = float(input("Enter Computer Marks: "))
+    physics = float(input("Enter Physics Marks: "))
+    chemistry = float(input("Enter Chemistry Marks: "))
+
+    total = english + math + computers + physics + chemistry
+    percentage = (total / 500) * 100
+
+    result[rno] = [name,percentage]
+
+print(result)
+
+for s in result:
+    if result[s][1]>75:
+      print("Following students having more than 75 marks:")
+      print(result[s][0])
